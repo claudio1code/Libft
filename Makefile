@@ -13,7 +13,10 @@ C_FILES = ft_isalpha.c\
 		  ft_bzero.c\
 		  ft_memcpy.c\
 		  ft_memmove.c\
-		  ft_memset.c
+		  ft_memset.c\
+		  ft_strlcpy.c\
+		  ft_toupper.c\
+		  ft_tolower.c
 
 
 O_FILES = $(C_FILES:%.c=%.o)
