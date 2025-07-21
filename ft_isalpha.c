@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/17 14:17:14 by clados-s          #+#    #+#             */
-/*   Updated: 2025/07/18 09:22:55 by clados-s         ###   ########.fr       */
+/*   Created: 2025/07/21 14:24:56 by clados-s          #+#    #+#             */
+/*   Updated: 2025/07/21 14:24:59 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,3 @@ int	ft_isalpha(int c)
 {
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-// 	printf("%d", ft_isalpha('\0'));
-// }

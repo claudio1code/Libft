@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 09:23:47 by clados-s          #+#    #+#             */
-/*   Updated: 2025/07/18 09:26:09 by clados-s         ###   ########.fr       */
+/*   Created: 2025/07/21 14:25:39 by clados-s          #+#    #+#             */
+/*   Updated: 2025/07/21 14:25:52 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,3 @@ int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-// 	printf("%d", ft_isdigit('0'));
-// }

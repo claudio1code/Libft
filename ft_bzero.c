@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 11:28:35 by clados-s          #+#    #+#             */
-/*   Updated: 2025/07/18 11:51:27 by clados-s         ###   ########.fr       */
+/*   Created: 2025/07/21 14:22:53 by clados-s          #+#    #+#             */
+/*   Updated: 2025/07/21 14:24:39 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ void	ft_bzero(void *s, size_t n)
 	ptr = (unsigned char *)s;
 	while (n > 0)
 	{
-		ptr = "\0";
+		*ptr = '\0';
 		ptr++;
 		n--;
 	}
-	return (s);
 }

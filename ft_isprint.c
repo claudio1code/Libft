@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 15:22:36 by clados-s          #+#    #+#             */
-/*   Updated: 2025/07/18 15:23:16 by clados-s         ###   ########.fr       */
+/*   Created: 2025/07/21 14:26:08 by clados-s          #+#    #+#             */
+/*   Updated: 2025/07/21 14:27:41 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }
