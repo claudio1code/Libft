@@ -22,12 +22,11 @@ C_FILES = ft_isalpha.c\
 		  ft_strrchr.c\
 		  ft_strncmp.c\
 		  ft_memchr.c\
-		  ft_memcmp.c
+		  ft_memcmp.c\
+		  ft_strnstr.c
 
 
 O_FILES = $(C_FILES:%.c=%.o)
-
-HEADERS = libft.h
 
 all:$(NAME) clean
 
