@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/22 11:34:14 by clados-s          #+#    #+#             */
-/*   Updated: 2025/07/22 13:05:27 by clados-s         ###   ########.fr       */
+/*   Created: 2025/07/22 13:10:07 by clados-s          #+#    #+#             */
+/*   Updated: 2025/07/22 13:38:47 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*str;
+	unsigned char	find_c;
+
+	str = (unsigned char *)s;
+	find_c = (unsigned char)c;
 
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (i < n -1 && s1[i] && s1[i] == s2[i])
+	while (i < n)
+	{
+		if (str[i] == find_c)
+			return ((void *)&str[i]);
 		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	}
+	return (NULL);
 }

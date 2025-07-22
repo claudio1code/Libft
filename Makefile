@@ -1,6 +1,6 @@
 NAME = libft.a
 
-CC = gcc
+CC = cc
 
 CFLAGS = -Wall -Wextra  -Werror -g3
 
@@ -19,7 +19,10 @@ C_FILES = ft_isalpha.c\
 		  ft_isdigit.c\
 		  ft_tolower.c\
 		  ft_strchr.c\
-		  ft_strrchr.c
+		  ft_strrchr.c\
+		  ft_strncmp.c\
+		  ft_memchr.c\
+		  ft_memcmp.c
 
 
 O_FILES = $(C_FILES:%.c=%.o)
@@ -35,5 +38,5 @@ $(NAME):$(O_FILES)
 clean:
 	rm -f *.o 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) 
 re: fclean all
