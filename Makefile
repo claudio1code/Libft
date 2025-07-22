@@ -16,7 +16,10 @@ C_FILES = ft_isalpha.c\
 		  ft_memset.c\
 		  ft_strlcpy.c\
 		  ft_toupper.c\
-		  ft_tolower.c
+		  ft_isdigit.c\
+		  ft_tolower.c\
+		  ft_strchr.c\
+		  ft_strrchr.c
 
 
 O_FILES = $(C_FILES:%.c=%.o)
