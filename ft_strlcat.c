@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/22 15:05:43 by clados-s          #+#    #+#             */
-/*   Updated: 2025/07/23 11:34:38 by clados-s         ###   ########.fr       */
+/*   Created: 2025/07/23 08:41:22 by clados-s          #+#    #+#             */
+/*   Updated: 2025/07/23 11:40:59 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
+	size_t	len_dst;
+	size_t	len_src;
 	size_t	i;
-	size_t	j;
 
+	if ((!dst || !src) && !size)
+		return (0);
+	len_dst = ft_strlen(dst);
+	len_src = ft_strlen(src);
 	i = 0;
-	if (!big && !len)
-		return (NULL);
-	if (!little[i])
-		return ((char *)big);
-	while (big[i] && i < len)
+	if (size <= len_dst)
+		return (len_src + size);
+	while ((len_dst + i) < size - 1 && src[i])
 	{
-		j = 0;
-		while (little[j] && (big[i + j] == little[j])
-			&& (i + j) < len)
-			j++;
-		if (!little[j])
-			return ((char *)&big[i]);
+		dst[len_dst + i] = src[i];
 		i++;
 	}
-	return (NULL);
+	dst[len_dst + i] = '\0';
+	return (len_dst + len_src);
 }

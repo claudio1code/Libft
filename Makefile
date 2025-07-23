@@ -8,7 +8,6 @@ C_FILES = ft_isalpha.c\
 		  ft_isalnum.c\
 		  ft_isprint.c\
 		  ft_isascii.c\
-		  ft_isalnum.c\
 		  ft_strlen.c\
 		  ft_bzero.c\
 		  ft_memcpy.c\
@@ -23,19 +22,29 @@ C_FILES = ft_isalpha.c\
 		  ft_strncmp.c\
 		  ft_memchr.c\
 		  ft_memcmp.c\
-		  ft_strnstr.c
+		  ft_strnstr.c\
+		  ft_atoi.c\
+		  ft_strlcat.c\
+		  ft_calloc.c
 
 
 O_FILES = $(C_FILES:%.c=%.o)
 
-all:$(NAME) clean
+all:$(NAME)
 
 $(NAME):$(O_FILES)
 	ar rcs $@ $^
 %.o:%.c
 	$(CC) $(CFLAGS) -c $< -o $@
+bonus:
+	@echo "sem funçoes bonus"
+so: clean
+	$(CC) -fPIC	$(CFLAGS) -c $(C_FILES)
+	$(CC) -shared -o libft.so $(O_FILES)
 clean:
 	rm -f *.o 
 fclean: clean
 	rm -f $(NAME) 
 re: fclean all
+
+.PHONY: all clean fclean re so
