@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 10:59:10 by clados-s          #+#    #+#             */
-/*   Updated: 2025/07/24 14:30:53 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/07/24 15:12:31 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int				i;
+	unsigned char	*str;
 
 	i = ft_strlen(s);
+	str = (unsigned char *)s;
 	while (i >= 0)
 	{
-		if (s[i] == c)
-			return ((unsigned char *)&s[i]);
+		if (str[i] == c)
+			return ((char *)&str[i]);
 		--i;
 	}
 	return (NULL);
 }
-
