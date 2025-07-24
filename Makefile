@@ -25,7 +25,10 @@ C_FILES = ft_isalpha.c\
 		  ft_strnstr.c\
 		  ft_atoi.c\
 		  ft_strlcat.c\
-		  ft_calloc.c
+		  ft_calloc.c\
+		  ft_strdup.c\
+		  ft_substr.c
+		  
 
 
 O_FILES = $(C_FILES:%.c=%.o)
