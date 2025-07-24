@@ -29,10 +29,11 @@ C_FILES = ft_isalpha.c\
 		  ft_strdup.c\
 		  ft_substr.c\
 		  ft_strjoin.c
+		  ft_strtrim.c
 
 
 
-O_FILES = $(C_FILES:%.c=%.o)
+O_FILES = $(C_FILES:.c=.o)
 
 all:$(NAME)
 
@@ -46,7 +47,7 @@ so: clean
 	$(CC) -fPIC	$(CFLAGS) -c $(C_FILES)
 	$(CC) -shared -o libft.so $(O_FILES)
 clean:
-	rm -f *.o 
+	rm -f $(O_FILES) 
 fclean: clean
 	rm -f $(NAME) 
 re: fclean all
