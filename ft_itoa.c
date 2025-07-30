@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 11:55:18 by clados-s          #+#    #+#             */
-/*   Updated: 2025/07/28 16:41:36 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/07/29 13:41:44 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int	count_digits(long n)
 
 	i = 1;
 	if (n == 0)
-		return(1);
+		return (1);
 	if (n < 0)
 	{
 		n = -n;

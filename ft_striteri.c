@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 10:39:45 by clados-s          #+#    #+#             */
-/*   Updated: 2025/07/29 10:50:27 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/07/29 13:43:38 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	int	i;
 
 	if (!s || !f)
-		return;
+		return ;
 	i = -1;
 	while (s[++i])
 		f(i, &s[i]);

@@ -6,13 +6,13 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 11:14:47 by clados-s          #+#    #+#             */
-/*   Updated: 2025/07/29 11:17:03 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/07/29 13:41:17 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write (fd, &c, 1);
 }
