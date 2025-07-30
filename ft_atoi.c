@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 16:06:44 by clados-s          #+#    #+#             */
-/*   Updated: 2025/07/23 11:12:33 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/07/30 09:47:58 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ int	ft_atoi(const char *nptr)
 		number = number * 10 + (nptr[i] - '0');
 		i++;
 	}
-	return (number * sign);
+	return ((int)number * sign);
 }

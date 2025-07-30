@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 09:13:17 by clados-s          #+#    #+#             */
-/*   Updated: 2025/07/29 10:12:49 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/07/30 13:48:10 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*s_new;
 
 	if (!s || !f)
-		return ((char *)0);
+		return (NULL);
 	i = -1;
-	s_new = calloc (ft_strlen(s) + 1, sizeof(char));
+	s_new = ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	if (!s_new)
-		return ((char *)0);
+		return (NULL);
 	while (s[++i])
 		s_new[i] = f(i, s[i]);
 	return (s_new);

@@ -39,7 +39,14 @@ C_FILES = ft_isalpha.c\
 		  ft_putendl_fd.c\
 		  ft_putnbr_fd.c
 
+C_BONUS = 	ft_lstnew_bonus.c\
+			ft_lstadd_front_bonus.c\
+			ft_lstsize_bonus.c\
+			ft_lstlast_bonus.c\
+			ft_lstadd_back_bonus.c
+
 O_FILES = $(C_FILES:.c=.o)
+O_BONUS = $(C_BONUS:.c=.o)
 
 all:$(NAME)
 
@@ -47,15 +54,10 @@ $(NAME):$(O_FILES)
 	ar rcs $@ $^
 %.o:%.c
 	$(CC) $(CFLAGS) -c $< -o $@
-bonus:
-	@echo "sem funçoes bonus"
-so: clean
-	$(CC) -fPIC	$(CFLAGS) -c $(C_FILES)
-	$(CC) -shared -o libft.so $(O_FILES)
+bonus:$(NAME) $(O_BONUS)
+	ar rcs $(NAME) $(O_BONUS)
 clean:
-	rm -f $(O_FILES) 
+	rm -f $(O_FILES) $(O_BONUS)
 fclean: clean
 	rm -f $(NAME) 
 re: fclean all
-
-.PHONY: all clean fclean re so

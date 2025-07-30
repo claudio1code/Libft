@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 14:25:51 by clados-s          #+#    #+#             */
-/*   Updated: 2025/07/29 09:08:05 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/07/30 13:18:56 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		--end;
 	sub_len = end - start;
 	sub = ft_calloc((size_t)sub_len + 1, sizeof(char));
+	if (!sub)
+		return (NULL);
 	start = -1;
 	while (&ptr[++start] < &s1[end])
 		sub[start] = ptr[start];
