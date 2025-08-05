@@ -106,5 +106,5 @@ Depois, é só executar:
 
 **Claudio Matheus**
 
-* Github: claudio1code(https://github.com/claudio1code)
+* Github: @claudio1code (https://github.com/claudio1code)
 * Login 42: `clados-s`
