@@ -105,6 +105,3 @@ Depois, é só executar:
 ## 👤 Autor
 
 **Claudio Matheus**
-
-* Github: @claudio1code (https://github.com/claudio1code)
-* Login 42: `clados-s`
