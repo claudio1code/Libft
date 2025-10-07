@@ -6,24 +6,24 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 10:21:12 by clados-s          #+#    #+#             */
-/*   Updated: 2025/10/07 13:45:51 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/08/06 09:59:39 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 static int	check_format(char format, va_list args)
 {
 	unsigned long	ptr_val;
 
 	if (format == '%')
-		return (ft_iputchar('%'));
+		return (ft_putchar('%'));
 	else if (format == 'c')
-		return (ft_iputchar(va_arg(args, int)));
+		return (ft_putchar(va_arg(args, int)));
 	else if (format == 's')
-		return (ft_iputstr(va_arg(args, char *)));
+		return (ft_putstr(va_arg(args, char *)));
 	else if (format == 'd' || format == 'i')
-		return (ft_iputnbr(va_arg(args, int)));
+		return (ft_putnbr(va_arg(args, int)));
 	else if (format == 'u')
 		return (ft_putnbr_unsigned(va_arg(args, unsigned int)));
 	else if (format == 'x')
@@ -34,8 +34,8 @@ static int	check_format(char format, va_list args)
 	{
 		ptr_val = va_arg(args, unsigned long);
 		if (ptr_val == 0)
-			return (ft_iputstr("(nil)"));
-		return (ft_iputstr("0x") + ft_puthexa(ptr_val, "0123456789abcdef"));
+			return (ft_putstr("(nil)"));
+		return (ft_putstr("0x") + ft_puthexa(ptr_val, "0123456789abcdef"));
 	}
 	return (0);
 }

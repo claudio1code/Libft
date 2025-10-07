@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:24:09 by clados-s          #+#    #+#             */
-/*   Updated: 2025/10/07 13:50:06 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/10/07 14:42:37 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,8 @@ int		ft_iputstr(char *str);
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
 # endif
+
+# define MAX_FD 1048576
 
 char	*get_next_line(int fd);
 
