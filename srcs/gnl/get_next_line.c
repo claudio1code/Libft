@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 13:41:07 by clados-s          #+#    #+#             */
-/*   Updated: 2025/10/07 12:16:11 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/10/07 13:38:34 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,14 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-void	*free_null(void *ptr)
+static void	*free_null(void *ptr)
 {
 	if (ptr)
 		free(ptr);
 	return (NULL);
 }
 
-char	*pickup_line(char *rest)
+static char	*pickup_line(char *rest)
 {
 	char	*new_line;
 	int		i;
@@ -70,7 +70,7 @@ char	*pickup_line(char *rest)
 	return (new_line);
 }
 
-char	*update_rest(char *rest)
+static char	*update_rest(char *rest)
 {
 	char	*new_rest;
 	int		i;
@@ -94,16 +94,27 @@ char	*update_rest(char *rest)
 	return (new_rest);
 }
 
-// int main(void)
-// {
-// 	char fd = open("teste.txt", O_RDONLY);
-// 	char	*line = get_next_line(fd);
-// 	while (line != NULL)
-// 	{
-// 		printf("%s", line);
-// 		free(line);
-// 		line = get_next_line(fd);
-// 	}
-// 	close(fd);
-// 	return (0);
-// }
+static char	*ft_strjoin_and_free_rest(char *rest, char *buffer)
+{
+	char	*new_str;
+	int		len_newstr;
+	int		i;
+	int		j;
+
+	if (!rest)
+		rest = ft_calloc(sizeof(char), 1);
+	if (!buffer)
+		return (rest);
+	len_newstr = ft_strlen(rest) + ft_strlen(buffer);
+	new_str = ft_calloc(sizeof(char), len_newstr + 1);
+	if (!new_str)
+		return (free_null(rest));
+	i = -1;
+	while (rest[++i])
+		new_str[i] = rest[i];
+	j = -1;
+	while (buffer[++j])
+		new_str[j + i] = buffer[j];
+	free(rest);
+	return (new_str);
+}

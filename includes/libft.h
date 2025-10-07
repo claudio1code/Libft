@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:24:09 by clados-s          #+#    #+#             */
-/*   Updated: 2025/10/07 12:10:40 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/10/07 13:40:03 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,9 +92,5 @@ int		ft_putstr_pf(char *str);
 # endif
 
 char	*get_next_line(int fd);
-void	*free_null(void *ptr);
-char	*ft_strjoin_and_free_rest(char *rest, char *buffer);
-char	*update_rest(char *rest);
-char	*pickup_line(char *rest);
 
 #endif
