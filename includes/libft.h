@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:24:09 by clados-s          #+#    #+#             */
-/*   Updated: 2025/10/07 13:40:03 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/10/07 13:50:06 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,11 +77,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 /* ************************************************************************** */
 
 int		ft_printf(const char *format, ...);
-int		ft_putchar_pf(char c);
+int		ft_iputchar(char c);
 int		ft_puthexa(unsigned long n, const char *base);
 int		ft_putnbr_unsigned(unsigned int n);
-int		ft_putnbr_pf(int n);
-int		ft_putstr_pf(char *str);
+int		ft_iputnbr(int n);
+int		ft_iputstr(char *str);
 
 /* ************************************************************************** */
 /* GET_NEXT_LINE                                    */

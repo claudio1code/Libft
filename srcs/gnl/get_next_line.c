@@ -6,11 +6,16 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 13:41:07 by clados-s          #+#    #+#             */
-/*   Updated: 2025/10/07 13:38:34 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/10/07 13:49:26 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void		*free_null(void *ptr);
+static char		*pickup_line(char *rest);
+static char		*update_rest(char *rest);
+static char		*ft_strjoin_and_free_rest(char *rest, char *buffer);
 
 char	*get_next_line(int fd)
 {
