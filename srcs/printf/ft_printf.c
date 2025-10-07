@@ -6,11 +6,11 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 10:21:12 by clados-s          #+#    #+#             */
-/*   Updated: 2025/08/05 14:00:05 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/10/07 11:20:38 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static int	check_format(char format, va_list args)
 {

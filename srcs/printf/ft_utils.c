@@ -6,11 +6,11 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 14:03:02 by clados-s          #+#    #+#             */
-/*   Updated: 2025/08/05 14:24:46 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/10/07 11:20:54 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_putchar(char c)
 {
