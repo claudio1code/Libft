@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 13:41:07 by clados-s          #+#    #+#             */
-/*   Updated: 2025/10/07 11:41:21 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/10/07 12:16:11 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*get_next_line(int fd)
 		return (NULL);
 	buffer = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 	bytes_buffer = 1;
-	while (!ft_strchar(rest, '\n') && bytes_buffer > 0)
+	while (!ft_strchr(rest, '\n') && bytes_buffer > 0)
 	{
 		bytes_buffer = read(fd, buffer, BUFFER_SIZE);
 		if (bytes_buffer == -1)

@@ -6,18 +6,18 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 14:03:02 by clados-s          #+#    #+#             */
-/*   Updated: 2025/10/07 11:20:54 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/10/07 12:17:38 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putchar(char c)
+int	ft_putchar_pf(char c)
 {
 	return (write(1, &c, 1));
 }
 
-int	ft_putstr(char *str)
+int	ft_putstr_pf(char *str)
 {
 	int	count;
 
@@ -28,11 +28,11 @@ int	ft_putstr(char *str)
 		return (6);
 	}
 	while (*str)
-		count += ft_putchar(*str++);
+		count += ft_putchar_pf(*str++);
 	return (count);
 }
 
-int	ft_putnbr(int n)
+int	ft_putnbr_pf(int n)
 {
 	long	nbr;
 	int		count;
@@ -41,12 +41,12 @@ int	ft_putnbr(int n)
 	count = 0;
 	if (nbr < 0)
 	{
-		count += ft_putchar('-');
+		count += ft_putchar_pf('-');
 		nbr = -nbr;
 	}
 	if (nbr >= 10)
-		count += ft_putnbr(nbr / 10);
-	count += ft_putchar((nbr % 10) + '0');
+		count += ft_putnbr_pf(nbr / 10);
+	count += ft_putchar_pf((nbr % 10) + '0');
 	return (count);
 }
 
@@ -57,7 +57,7 @@ int	ft_putnbr_unsigned(unsigned int n)
 	count = 0;
 	if (n >= 10)
 		count += ft_putnbr_unsigned(n / 10);
-	count += ft_putchar((n % 10) + '0');
+	count += ft_putchar_pf((n % 10) + '0');
 	return (count);
 }
 
@@ -68,6 +68,6 @@ int	ft_puthexa(unsigned long n, const char *base)
 	count = 0;
 	if (n >= 16)
 		count += ft_puthexa(n / 16, base);
-	count += ft_putchar(base[n % 16]);
+	count += ft_putchar_pf(base[n % 16]);
 	return (count);
 }
