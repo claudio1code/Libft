@@ -14,7 +14,8 @@ CTYPES_FILES =	ft_isalnum.c \
 				ft_tolower.c \
 				ft_toupper.c
 
-GNL_FILES = 	get_next_line.c
+GNL_FILES = 	get_next_line.c\
+				get_next_line_bonus.c
 
 LISTS_FILES = 	ft_lstadd_back_bonus.c \
 				ft_lstadd_front_bonus.c \
