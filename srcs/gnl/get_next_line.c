@@ -6,11 +6,11 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 13:41:07 by clados-s          #+#    #+#             */
-/*   Updated: 2025/08/27 13:26:52 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/10/07 11:41:21 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 char	*get_next_line(int fd)
 {
