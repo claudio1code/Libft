@@ -33,7 +33,9 @@ MEMORY_FILES = 	ft_bzero.c \
 				ft_memcmp.c \
 				ft_memcpy.c \
 				ft_memmove.c \
-				ft_memset.c
+				ft_memset.c \
+				ft_free_split.c\
+				ft_freenull_split.c
 
 PRINTF_FILES = 	ft_printf.c \
 				ft_utils.c
@@ -80,7 +82,15 @@ DEF_COLOR = \033[0;39m
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@echo "$(YELLOW)A linkar $(NAME)... $(DEF_COLOR)\n"
+	@echo -n "$(YELLOW)A linkar $(NAME)... $(DEF_COLOR)"
+	@sh -c 'i=0; while [ $$i -lt 10 ]; do \
+		echo -n "\b|"; sleep 0.05; \
+		echo -n "\b/"; sleep 0.05; \
+		echo -n "\b-"; sleep 0.05; \
+		echo -n "\b\\"; sleep 0.05; \
+		i=$$(($$i+1)); \
+	done'
+	@echo "\b\b$(GREEN)OK!$(DEF_COLOR)"
 	@ar rcs $(NAME) $(OBJS)
 	@echo "$(GREEN)$(NAME) criado com sucesso!$(DEF_COLOR)\n"
 

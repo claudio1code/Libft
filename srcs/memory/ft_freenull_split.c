@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   freenull_split.c                                   :+:      :+:    :+:   */
+/*   ft_freenull_split.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 16:10:25 by clados-s          #+#    #+#             */
-/*   Updated: 2025/10/13 17:03:27 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/10/14 10:58:22 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*free_split_null(char **str_array)
 
 	i = 0;
 	if (!str_array)
-		return ;
+		return (NULL);
 	while (str_array[i])
 	{
 		free(str_array[i]);
