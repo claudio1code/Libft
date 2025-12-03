@@ -3,8 +3,9 @@ NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra  -Werror -g3
 
-INC_DIR = includes
-SRC_DIR = srcs
+INC_DIR = includes/
+SRC_DIR = srcs/
+OBJS_DIR = objs/
 
 CTYPES_FILES =	ft_isalnum.c \
 				ft_isalpha.c \
@@ -12,7 +13,8 @@ CTYPES_FILES =	ft_isalnum.c \
 				ft_isdigit.c \
 				ft_isprint.c \
 				ft_tolower.c \
-				ft_toupper.c
+				ft_toupper.c \
+				ft_isspace.c
 
 GNL_FILES = 	get_next_line.c\
 				get_next_line_bonus.c
@@ -46,7 +48,10 @@ STDIO_FILES = 	ft_putchar_fd.c \
 				ft_putstr_fd.c
 
 STDLIB_FILES = 	ft_atoi.c \
-				ft_itoa.c
+				ft_itoa.c \
+				ft_atof.c \
+				ft_atold.c \
+				ft_atol.c
 
 STRING_FILES = 	ft_split.c \
 				ft_strchr.c \
@@ -63,6 +68,10 @@ STRING_FILES = 	ft_split.c \
 				ft_strtrim.c \
 				ft_substr.c
 
+MATH_FILES = 	ft_signal.c \
+				ft_is_double.c \
+				ft_isint.c
+
 SRCS = 	$(addprefix $(SRC_DIR)/ctypes/, $(CTYPES_FILES)) \
 		$(addprefix $(SRC_DIR)/gnl/, $(GNL_FILES)) \
 		$(addprefix $(SRC_DIR)/lists/, $(LISTS_FILES)) \
@@ -70,7 +79,8 @@ SRCS = 	$(addprefix $(SRC_DIR)/ctypes/, $(CTYPES_FILES)) \
 		$(addprefix $(SRC_DIR)/printf/, $(PRINTF_FILES)) \
 		$(addprefix $(SRC_DIR)/stdio/, $(STDIO_FILES)) \
 		$(addprefix $(SRC_DIR)/stdlib/, $(STDLIB_FILES)) \
-		$(addprefix $(SRC_DIR)/string/, $(STRING_FILES))
+		$(addprefix $(SRC_DIR)/string/, $(STRING_FILES)) \
+		$(addprefix $(SRC_DIR)/math/, $(MATH_FILES))
 
 OBJS = $(SRCS:.c=.o)
 
@@ -83,16 +93,15 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@echo -n "$(YELLOW)A linkar $(NAME)... $(DEF_COLOR)"
-	@sh -c 'i=0; while [ $$i -lt 10 ]; do \
+	@sh -c '(while kill -0 $$PPID 2>/dev/null; do \
 		echo -n "\b|"; sleep 0.05; \
 		echo -n "\b/"; sleep 0.05; \
 		echo -n "\b-"; sleep 0.05; \
 		echo -n "\b\\"; sleep 0.05; \
-		i=$$(($$i+1)); \
-	done'
+	done) & \
+	trap "kill $$!" EXIT; \
+	ar rcs $(NAME) $(OBJS)'
 	@echo "\b\b$(GREEN)OK!$(DEF_COLOR)"
-	@ar rcs $(NAME) $(OBJS)
-	@echo "$(GREEN)$(NAME) criado com sucesso!$(DEF_COLOR)\n"
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
