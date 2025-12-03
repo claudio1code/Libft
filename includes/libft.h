@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:24:09 by clados-s          #+#    #+#             */
-/*   Updated: 2025/12/03 13:44:57 by clados-s         ###   ########.fr       */
+/*   Updated: 2025/11/13 20:01:20 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <stdlib.h>
 # include <stdarg.h>
 # include <fcntl.h>
-# include <limits.h>
 
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648

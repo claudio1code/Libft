@@ -100,8 +100,8 @@ $(NAME): $(OBJS)
 		echo -n "\b\\"; sleep 0.05; \
 	done) & \
 	trap "kill $$!" EXIT; \
-	ar rcs $(NAME) $(OBJS)'
-	@echo "\b\b$(GREEN)OK!$(DEF_COLOR)"
+	ar rcs $(NAME) $(OBJS); \
+	echo "\b\b$(GREEN)OK!$(DEF_COLOR)"'
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
